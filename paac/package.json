@@ -35,10 +35,9 @@
         "@ngx-translate/http-loader": "^3.0.1",
         "@types/google-maps": "^3.2.0",
         "angularfire2": "^5.0.0-rc.4",
-        "cordova-android": "^6.2.3",
+        "cordova-android": "^7.1.0",
         "cordova-plugin-device": "^2.0.2",
         "cordova-plugin-geolocation": "^4.0.1",
-        "cordova-plugin-googlemaps": "^2.2.9",
         "cordova-plugin-ionic-keyboard": "^2.0.5",
         "cordova-plugin-ionic-webview": "^1.1.19",
         "cordova-plugin-network-information": "^2.0.1",
@@ -62,10 +61,6 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-geolocation": {},
-            "cordova-plugin-googlemaps": {
-                "API_KEY_FOR_ANDROID": "AIzaSyDPGCa-_lrX3OZPXepaTW4G7YHA8QtQeqY",
-                "API_KEY_FOR_IOS": "AIzaSyDPGCa-_lrX3OZPXepaTW4G7YHA8QtQeqY"
-            },
             "cordova-plugin-network-information": {},
             "cordova-plugin-speechrecognition": {},
             "cordova-plugin-statusbar": {},

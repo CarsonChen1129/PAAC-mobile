@@ -165,7 +165,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource
         self.view.layoutIfNeeded()
         
         let sourceLocation = ForbesAtAtwood
-        let destinationLocation = ForbesAtHamburg
+        let destinationLocation = ForbesAtMorewood
         
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
         let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
@@ -181,7 +181,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource
         }
     
         let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = "Forbes / Hamburg Hall"
+        destinationAnnotation.title = "Forbes / Morewood"
         
         if let location = destinationPlacemark.location {
             destinationAnnotation.coordinate = location.coordinate

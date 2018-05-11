@@ -1,15 +1,77 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      {{ 'Map' | translate }}
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="switchLanguage()">{{ 'Language' | translate }}</button>
-      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>{{ 'Add-Marker' | translate }}</button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
+<!--<ion-header>-->
+  <!--<ion-navbar>-->
+    <!--<ion-title>-->
+      <!--{{ 'Map' | translate }}-->
+    <!--</ion-title>-->
+    <!--<ion-buttons end>-->
+      <!--<button ion-button (click)="switchLanguage()">{{ 'Language' | translate }}</button>-->
+      <!--<button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>{{ 'Add-Marker' | translate }}</button>-->
+    <!--</ion-buttons>-->
+  <!--</ion-navbar>-->
+<!--</ion-header>-->
 
 <ion-content>
-  <div #map id="map"></div>
+  <div class="top-area">
+    <div class="menu-button">
+      <button ion-button (click)="toggleMenu()" class="disable-hover bar-buttons bar-buttons-md bar-button bar-button-md bar-button-menutoggle bar-button-menutoggle-md">
+        <span class="button-inner">
+          <ion-icon name="menu" role="img" class="icon icon-md ion-md-menu" aria-label="menu"></ion-icon>
+        </span>
+        <div class="button-effect"></div>
+      </button>
+    </div>
+    <ion-searchbar id="search-input" class="controls" type="text" placeholder="Search bus stop" [(ngModel)]="query" (ionInput)="searchPlace()">
+    </ion-searchbar>
+    <div class="voice-button">
+      <button ion-button (click)="speech()" class="disable-hover bar-button bar-button-md">
+        <span class="button-inner">
+          <ion-icon name="mic" role="img" class="icon icon-md" ></ion-icon>
+        </span>
+      </button>
+    </div>
+    <ion-list [hidden]="places.length == 0">
+      <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
+    </ion-list>
+  </div>
+  <!--<input id="search-input" class="controls" type="text" placeholder="Search Box">-->
+  <!--<div #map id="map"></div>-->
+  <div #pleaseConnect id="please-connect">
+    <p>Please connect to the Internet...</p>
+  </div>
+
+  <div #map id="map">
+    <ion-spinner></ion-spinner>
+  </div>
+  <ion-content class="bus-list-content">
+    <div class="filter">
+      <button ion-button icon-end end>
+        Nearby
+        <ion-icon name="arrow-down"></ion-icon>
+      </button>
+    </div>
+    <!--<ion-scroll class="bus-list" scrollY="true">-->
+    <ion-list *ngIf="busStopList.length == 0">
+      <ion-card *ngFor="let bus of nearbyBusList">
+        <ion-item>
+          <div style="font-size:6vw; color:#1892FB;" item-start>
+            {{bus.num}}
+          </div>
+          <h2>{{bus.name}}</h2>
+          <button ion-button clear item-end>{{bus.time}}</button>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+      <ion-list *ngIf="busStopList.length > 0">
+        <ion-card *ngFor="let bus of busStopList" (touchstart)="selectBusStop(bus)">
+          <ion-item>
+            <ion-avatar item-start>
+              <img [src]="bus.icon">
+            </ion-avatar>
+            <h2>{{bus.name}}</h2>
+            <button ion-button clear item-end (click)="goPlace()">Go</button>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+    <!--</ion-scroll>-->
+  </ion-content>
 </ion-content>

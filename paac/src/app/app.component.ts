@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {TranslateService} from "@ngx-translate/core";
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -14,15 +15,22 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, img: string}>;
+  lan: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public translate: TranslateService,
+    public splashScreen: SplashScreen) {
     this.initializeApp();
+    this.lan = 'en';
+    translate.setDefaultLang(this.lan);
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Bus Map', component: HomePage, img: 'assets/imgs/bus.jpg' },
+      { title: 'Trip Planner', component: ListPage, img: 'assets/imgs/trip.jpg' }
     ];
 
   }
@@ -34,6 +42,15 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  switchLanguage() {
+    if (this.lan == 'en') {
+      this.lan = 'cn';
+    } else {
+      this.lan = 'en';
+    }
+    this.translate.use(this.lan);
   }
 
   openPage(page) {

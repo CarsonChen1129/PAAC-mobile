@@ -15,6 +15,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {Connectivity} from "../providers/connectivity-service";
+import {Network} from "@ionic-native/network";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDP9a_TdLEPhuCmgnDgjrUTJRQQxjdOBl4",
@@ -60,6 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     Geolocation,
     HttpClient,
+    Network,
+    Connectivity,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

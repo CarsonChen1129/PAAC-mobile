@@ -1,5 +1,6 @@
 {
-  "Map":"Map",
   "Add-Marker":"Add Marker",
-  "Language":"Language"
+  "Language":"Switch Language",
+  "Bus Map":"Bus Map",
+  "Trip Planner":"Trip Planner"
 }

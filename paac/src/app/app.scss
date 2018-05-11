@@ -14,3 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.logo {
+  height:20%;
+}
+
+.img-menu {
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 20vh;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #FAFAFA;
+  }
+
+}

@@ -60,7 +60,6 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-geolocation": {},
             "cordova-plugin-network-information": {},
             "cordova-plugin-speechrecognition": {},
             "cordova-plugin-statusbar": {},
@@ -69,6 +68,7 @@
             "cordova-plugin-ionic-keyboard": {},
             "cordova-plugin-ionic-webview": {},
             "cordova-plugin-splashscreen": {},
+            "cordova-plugin-geolocation": {},
             "cordova-plugin-whitelist": {}
         },
         "platforms": [

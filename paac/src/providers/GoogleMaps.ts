@@ -88,29 +88,36 @@ export class GoogleMapsService {
 
     return new Promise((resolve) => {
 
-      this.geolocation.getCurrentPosition().then((position) => {
-
-        let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-        let mapOptions = {
-          center: latLng,
-          zoom: 15,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+      if (navigator.geolocation) {
+        var options = {
+          enableHighAccuracy: true
         };
+        this.geolocation.getCurrentPosition(options).then((position) => {
 
-        this.map = new google.maps.TransitLayer(this.map);
+          let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-        this.map = new google.maps.Map(this.mapElement, mapOptions);
-        let marker = new google.maps.Marker({
-          map: this.map,
-          animation: google.maps.Animation.DROP,
-          position: this.map.getCenter(),
-          icon:"assets/icon/Current location.png"
+          let mapOptions = {
+            center: latLng,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+
+          this.map = new google.maps.TransitLayer(this.map);
+
+          this.map = new google.maps.Map(this.mapElement, mapOptions);
+          let marker = new google.maps.Marker({
+            map: this.map,
+            animation: google.maps.Animation.DROP,
+            position: this.map.getCenter(),
+            icon:"assets/icon/Current location.png"
+          });
+          resolve(true);
+
+        }, (error)=> {
+          console.log(error.code);
+          console.log(error.message);
         });
-        resolve(true);
-
-      });
-
+      }
     });
 
   }

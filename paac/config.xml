@@ -68,6 +68,7 @@
         <splash height="960" platform="ios" src="resources/res/screens/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="resources/res/screens/ios/Default~iphone.png" width="320" />
     </platform>
+    <allow-navigation href="http://128.237.223.117:8100" />
     <engine name="android" spec="^7.1.0" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />

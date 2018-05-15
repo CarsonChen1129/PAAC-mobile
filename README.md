@@ -35,11 +35,11 @@ These instructions will get you a copy of the project up and have an idea about 
 
 Please refer to their GitHub pages to see their amazing repos.
 
-* **Jiajun Chen(Carson)** - *UI design, Android Client*
-* **Buqian Zheng** - *iOS Client* --[[Buqian Zheng](https://github.com/zhengbuqian)]
-* **Hongdi Zhang** - *User requirement survey, data analysis, testing* --[[Hongdi Zhang](https://github.com/eddyzhd)]
-* **Chunyi Cui** - *Cost estimation, data analysis, testing* --[[Chunyu Cui](https://github.com/JaneCui)]
-* **Xiaoxi Liu** - *Usability survery, data analysis, testing* --[[Xiaoxi Liu](https://github.com/josie00)]
+* **Jiajun Chen(Carson)**
+* **Buqian Zheng** --[[Buqian Zheng](https://github.com/zhengbuqian)]
+* **Hongdi Zhang** --[[Hongdi Zhang](https://github.com/eddyzhd)]
+* **Chunyi Cui** --[[Chunyu Cui](https://github.com/JaneCui)]
+* **Xiaoxi Liu** --[[Xiaoxi Liu](https://github.com/josie00)]
 
 ## License
 

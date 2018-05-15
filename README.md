@@ -33,11 +33,13 @@ These instructions will get you a copy of the project up and have an idea about 
 
 ## Authors
 
+Please refer to their GitHub pages to see their amazing repos.
+
 * **Jiajun Chen(Carson)** - *UI design, Android Client*
-* **Buqian Zheng** - *iOS Client*
-* **Hongdi Zhang** - *User requirement survey, data analysis, testing*
-* **Chunyi Cui** - *Cost estimation, testing*
-* **Xiaoxi Liu** - *Usability survery, testing*
+* **Buqian Zheng** - *iOS Client* [Buqian Zheng](https://github.com/zhengbuqian)
+* **Hongdi Zhang** - *User requirement survey, data analysis, testing* [Hongdi Zhang](https://github.com/eddyzhd)
+* **Chunyi Cui** - *Cost estimation, data analysis, testing* [Chunyu Cui](https://github.com/JaneCui)
+* **Xiaoxi Liu** - *Usability survery, data analysis, testing* [Xiaoxi Liu](https://github.com/josie00)
 
 ## License
 

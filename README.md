@@ -35,9 +35,9 @@ These instructions will get you a copy of the project up and have an idea about 
 
 * **Jiajun Chen(Carson)** - *UI design, Android Client*
 * **Buqian Zheng** - *iOS Client*
-* **Hongdi Zhang**
-* **Chunyi Cui**
-* **Xiaoxi Liu**
+* **Hongdi Zhang** - *User requirement survey, data analysis, testing*
+* **Chunyi Cui** - *Cost estimation, testing*
+* **Xiaoxi Liu** - *Usability survery, testing*
 
 ## License
 
